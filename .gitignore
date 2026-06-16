@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+ros_ws/build/
+ros_ws/install/
+ros_ws/log/
+
+.vscode/
+.idea/
+
+*.db3
+*.bag
+*.bag.active
+
+compile_commands.json
