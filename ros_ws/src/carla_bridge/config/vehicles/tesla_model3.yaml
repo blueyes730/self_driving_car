@@ -1,0 +1,6 @@
+ego_vehicle:
+  role_name: "hero"
+  vehicle_bp: "vehicle.tesla.model3"
+  auto_pilot: false
+  spawn:
+    mode: "random"
