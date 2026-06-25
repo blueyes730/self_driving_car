@@ -1,0 +1,155 @@
+sensors:
+  - name: front_rgb
+    type: sensor.camera.rgb
+    topic: /ego/front_camera/image_raw
+    frame_id: ego/front_camera
+
+    transform:
+      x: 1.8
+      y: 0.0
+      z: 1.6
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: left_front_rgb
+    type: sensor.camera.rgb
+    topic: /ego/left_front_camera/image_raw
+    frame_id: ego/left_front_camera
+
+    transform:
+      x: 1.2
+      y: -0.95
+      z: 1.5
+      roll: 0.0
+      pitch: 0.0
+      yaw: -60.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: left_rear_rgb
+    type: sensor.camera.rgb
+    topic: /ego/left_rear_camera/image_raw
+    frame_id: ego/left_rear_camera
+
+    transform:
+      x: -1.2
+      y: -0.95
+      z: 1.5
+      roll: 0.0
+      pitch: 0.0
+      yaw: -120.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: right_front_rgb
+    type: sensor.camera.rgb
+    topic: /ego/right_front_camera/image_raw
+    frame_id: ego/right_front_camera
+
+    transform:
+      x: 1.2
+      y: 0.95
+      z: 1.5
+      roll: 0.0
+      pitch: 0.0
+      yaw: 60.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: right_rear_rgb
+    type: sensor.camera.rgb
+    topic: /ego/right_rear_camera/image_raw
+    frame_id: ego/right_rear_camera
+
+    transform:
+      x: -1.2
+      y: 0.95
+      z: 1.5
+      roll: 0.0
+      pitch: 0.0
+      yaw: 120.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: rear_rgb
+    type: sensor.camera.rgb
+    topic: /ego/rear_camera/image_raw
+    frame_id: ego/rear_camera
+
+    transform:
+      x: -1.8
+      y: 0.0
+      z: 1.6
+      roll: 0.0
+      pitch: 0.0
+      yaw: 180.0
+
+    attributes:
+      image_size_x: 1280
+      image_size_y: 720
+      fov: 90
+      sensor_tick: 0.05
+
+  - name: roof_lidar
+    type: sensor.lidar.ray_cast
+    topic: /ego/lidar/points
+    frame_id: ego/lidar
+
+    transform:
+      x: 0.0
+      y: 0.0
+      z: 2.4
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+
+    attributes:
+      channels: 64
+      range: 100.0
+      points_per_second: 1300000
+      rotation_frequency: 20.0
+      upper_fov: 10.0
+      lower_fov: -30.0
+      sensor_tick: 0.05
+
+  - name: front_radar
+    type: sensor.other.radar
+    topic: /ego/radar/points
+    frame_id: ego/radar
+
+    transform:
+      x: 2.2
+      y: 0.0
+      z: 0.8
+      roll: 0.0
+      pitch: 0.0
+      yaw: 0.0
+
+    attributes:
+      horizontal_fov: 35
+      vertical_fov: 20
+      range: 100
+      sensor_tick: 0.05
